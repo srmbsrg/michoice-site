@@ -6,7 +6,7 @@
 <title>FAR-Apps F&R Processing | MiChoice Technology Systems</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0a;--bg2:#111111;--bg3:#141414;--border:#1f1f1f;--border2:#2a2a2a;--accent:#f97316;--accent-d:#ea580c;--accent-bg:rgba(249,115,22,.08);--t1:#f5f5f5;--t2:#a3a3a3;--t3:#6b7280;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
+:root{--bg:#0a0a0a;--bg2:#111111;--bg3:#141414;--border:#1f1f1f;--border2:#2a2a2a;--accent:#3b82f6;--accent-d:#2563eb;--accent-bg:rgba(59,130,246,.08);--t1:#f5f5f5;--t2:#a3a3a3;--t3:#6b7280;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
 body{font-family:var(--font);background:var(--bg);color:var(--t1);line-height:1.6}a{color:inherit;text-decoration:none}
 nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;z-index:100}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
@@ -15,7 +15,7 @@ nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 2rem;p
 .nav-cta{background:var(--accent);color:#000 !important;padding:.4rem 1rem;border-radius:4px;font-weight:600 !important}.nav-cta:hover{background:var(--accent-d) !important;color:#000 !important}
 .breadcrumb{max-width:1200px;margin:0 auto;padding:1.5rem 2rem .5rem;font-size:.82rem;color:var(--t3)}.breadcrumb a{color:var(--accent)}.breadcrumb span{margin:0 .5rem}
 .product-hero{max-width:1200px;margin:0 auto;padding:1.5rem 2rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.badge{display:inline-flex;align-items:center;background:var(--accent-bg);border:1px solid rgba(249,115,22,.25);color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border-radius:3px;margin-bottom:1rem}
+.badge{display:inline-flex;align-items:center;background:var(--accent-bg);border:1px solid rgba(59,130,246,.25);color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border-radius:3px;margin-bottom:1rem}
 .product-hero h1{font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:800;letter-spacing:-.03em;margin-bottom:.75rem}
 .product-hero p{color:var(--t2);font-size:.95rem;line-height:1.8;margin-bottom:1.5rem}
 .product-hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
@@ -53,7 +53,74 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 2
       <a href="products.html" class="btn-secondary">← All Products</a>
     </div>
   </div>
-  <div class="card-visual"><div class="big-icon">✅</div><h3>FAR-Apps</h3><p>Automated Eligibility · Real-Time Updates · Full Audit Trail</p></div>
+  <div class="card-visual" style="padding:0;overflow:hidden;background:#0d0f14">
+<svg viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+  <rect width="380" height="260" fill="#0d0f14"/>
+  <!-- Processing pipeline -->
+  <!-- Step 1: Application stack -->
+  <g transform="translate(35,80)">
+    <rect x="-28" y="-40" width="56" height="72" rx="3" fill="#0f1d30" stroke="#1e3a5c" stroke-width="1"/>
+    <rect x="-24" y="-36" width="48" height="64" rx="2" fill="#132033"/>
+    <line x1="-16" y1="-22" x2="16" y2="-22" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-16" y1="-12" x2="16" y2="-12" stroke="#1e3a5c" stroke-width="1" stroke-linecap="round"/>
+    <line x1="-16" y1="-2"  x2="10"  y2="-2"  stroke="#1e3a5c" stroke-width="1" stroke-linecap="round"/>
+    <line x1="-16" y1="8"   x2="14"  y2="8"   stroke="#1e3a5c" stroke-width="1" stroke-linecap="round"/>
+    <line x1="-16" y1="18"  x2="8"   y2="18"  stroke="#1e3a5c" stroke-width="1" stroke-linecap="round"/>
+    <!-- Stack effect -->
+    <rect x="-26" y="-38" width="56" height="1" rx="1" fill="#1e3a5c"/>
+    <rect x="-24" y="-41" width="56" height="1" rx="1" fill="#1e3a5c"/>
+    <text x="0" y="48" fill="#64748b" font-size="7" font-family="Arial" text-anchor="middle">Applications</text>
+    <text x="0" y="57" fill="#64748b" font-size="7" font-family="Arial" text-anchor="middle">Received</text>
+    <text x="0" y="-49" fill="#3b82f6" font-size="9" font-family="Arial" text-anchor="middle" font-weight="bold">1</text>
+  </g>
+  <text x="73" y="82" fill="#2563eb" font-size="14" font-family="Arial" font-weight="bold">→</text>
+  <!-- Step 2: Processing -->
+  <g transform="translate(125,80)">
+    <rect x="-30" y="-40" width="60" height="72" rx="6" fill="#1e3a5c" stroke="#3b82f6" stroke-width="1"/>
+    <text x="0" y="-15" fill="#93c5fd" font-size="7" font-family="Arial" text-anchor="middle" font-weight="bold">FAR-Apps</text>
+    <rect x="-20" y="-8" width="40" height="6" rx="2" fill="#0d2a4a"/>
+    <rect x="-20" y="2"  width="40" height="6" rx="2" fill="#0d2a4a"/>
+    <rect x="-20" y="12" width="40" height="6" rx="2" fill="#0d2a4a"/>
+    <rect x="-16" y="-8" width="10" height="6" rx="1" fill="#3b82f6" opacity="0.6">
+      <animate attributeName="width" values="10;32;10" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="0" y="42" fill="#64748b" font-size="7" font-family="Arial" text-anchor="middle">Auto-</text>
+    <text x="0" y="51" fill="#64748b" font-size="7" font-family="Arial" text-anchor="middle">Processing</text>
+    <text x="0" y="-49" fill="#3b82f6" font-size="9" font-family="Arial" text-anchor="middle" font-weight="bold">2</text>
+  </g>
+  <text x="165" y="82" fill="#2563eb" font-size="14" font-family="Arial" font-weight="bold">→</text>
+  <!-- Step 3: Determination -->
+  <g transform="translate(220,80)">
+    <polygon points="0,-42 35,12 -35,12" fill="#1a3a5c" stroke="#3b82f6" stroke-width="1"/>
+    <text x="0" y="-5" fill="#93c5fd" font-size="7.5" font-family="Arial" text-anchor="middle">Eligible?</text>
+    <text x="0" y="30" fill="#64748b" font-size="7" font-family="Arial" text-anchor="middle">Eligibility</text>
+    <text x="0" y="39" fill="#64748b" font-size="7" font-family="Arial" text-anchor="middle">Check</text>
+    <text x="0" y="-51" fill="#3b82f6" font-size="9" font-family="Arial" text-anchor="middle" font-weight="bold">3</text>
+  </g>
+  <text x="263" y="82" fill="#2563eb" font-size="14" font-family="Arial" font-weight="bold">→</text>
+  <!-- Step 4: POS Update -->
+  <g transform="translate(320,80)">
+    <rect x="-32" y="-40" width="64" height="72" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+    <text x="0" y="-18" fill="#86efac" font-size="7" font-family="Arial" text-anchor="middle" font-weight="bold">POS Updated</text>
+    <circle cx="0" cy="5" r="14" fill="#1a4a2e"/>
+    <path d="M -8 5 L -2 11 L 10 -3" stroke="#22c55e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="0" y="42" fill="#64748b" font-size="7" font-family="Arial" text-anchor="middle">Real-Time</text>
+    <text x="0" y="51" fill="#64748b" font-size="7" font-family="Arial" text-anchor="middle">All Sites</text>
+    <text x="0" y="-49" fill="#22c55e" font-size="9" font-family="Arial" text-anchor="middle" font-weight="bold">4</text>
+  </g>
+  <!-- Stats strip -->
+  <rect x="15" y="180" width="105" height="32" rx="4" fill="#0f2030" stroke="#2563eb" stroke-width="0.5"/>
+  <text x="67" y="193" fill="#93c5fd" font-size="8" font-family="Arial" text-anchor="middle" font-weight="bold">Labor Reduced</text>
+  <text x="67" y="205" fill="#64748b" font-size="7" font-family="Arial" text-anchor="middle">Auto determination</text>
+  <rect x="135" y="180" width="105" height="32" rx="4" fill="#0f2030" stroke="#2563eb" stroke-width="0.5"/>
+  <text x="187" y="193" fill="#93c5fd" font-size="8" font-family="Arial" text-anchor="middle" font-weight="bold">Max Funding</text>
+  <text x="187" y="205" fill="#64748b" font-size="7" font-family="Arial" text-anchor="middle">NSLP compliant</text>
+  <rect x="255" y="180" width="105" height="32" rx="4" fill="#0f2030" stroke="#2563eb" stroke-width="0.5"/>
+  <text x="307" y="193" fill="#93c5fd" font-size="8" font-family="Arial" text-anchor="middle" font-weight="bold">Full Audit Trail</text>
+  <text x="307" y="205" fill="#64748b" font-size="7" font-family="Arial" text-anchor="middle">State/federal ready</text>
+  <text x="190" y="243" fill="#4b6d90" font-size="8" font-family="Arial" text-anchor="middle">FAR-Apps · Automated Eligibility · Real-Time POS Updates</text>
+</svg>
+</div><h3>FAR-Apps</h3><p>Automated Eligibility · Real-Time Updates · Full Audit Trail</p></div>
 </div>
 
 <div class="benefits-strip">
