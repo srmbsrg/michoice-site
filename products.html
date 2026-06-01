@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Complete suite of K-12 school food service software — eMeal POS, COMS-PRO, FAR-Apps, EZ-Task Inventory, HACCP, and more from MiChoice Technology Systems.">
+<title>Products | MiChoice Technology Systems</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0a;--bg2:#111111;--bg3:#141414;--bg4:#1a1a1a;
+  --border:#1f1f1f;--border2:#2a2a2a;
+  --accent:#f97316;--accent-d:#ea580c;--accent-bg:rgba(249,115,22,.08);--accent-bg2:rgba(249,115,22,.15);
+  --t1:#f5f5f5;--t2:#a3a3a3;--t3:#6b7280;
+  --font:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+}
+body{font-family:var(--font);background:var(--bg);color:var(--t1);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.2rem;font-weight:700;letter-spacing:-.02em}
+.logo .mi{color:var(--accent)}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{color:var(--t2);font-size:.88rem;font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--accent)}
+.nav-cta{background:var(--accent);color:#000 !important;padding:.4rem 1rem;border-radius:4px;font-weight:600 !important;transition:background .2s !important}
+.nav-cta:hover{background:var(--accent-d) !important;color:#000 !important}
+
+.page-hero{max-width:1200px;margin:0 auto;padding:4rem 2rem 3rem}
+.eyebrow{color:var(--accent);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem}
+.page-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.03em;margin-bottom:.75rem}
+.page-hero p{color:var(--t2);font-size:1rem;max-width:640px;line-height:1.75}
+
+.divider{border:none;border-top:1px solid var(--border);margin:0}
+
+.suite-section{max-width:1200px;margin:0 auto;padding:4rem 2rem}
+.suite-label{display:flex;align-items:center;gap:1rem;margin-bottom:2rem}
+.suite-label h2{font-size:1.1rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--t2)}
+.suite-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+.product-row{display:grid;grid-template-columns:1fr 2fr;gap:3rem;padding:2.5rem;background:var(--bg3);border:1px solid var(--border);border-radius:8px;margin-bottom:1.25rem;transition:border-color .2s}
+.product-row:hover{border-color:var(--border2)}
+.product-row-meta{}
+.product-row-meta .badge{display:inline-block;background:var(--accent-bg);border:1px solid rgba(249,115,22,.25);color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .6rem;border-radius:3px;margin-bottom:.75rem}
+.product-row-meta h3{font-size:1.25rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.35rem}
+.product-row-meta .tagline{font-size:.85rem;color:var(--t3);margin-bottom:1.25rem}
+.product-row-meta a.learn{display:inline-flex;align-items:center;gap:.4rem;color:var(--accent);font-size:.85rem;font-weight:600;border:1px solid rgba(249,115,22,.3);padding:.4rem .9rem;border-radius:4px;transition:all .2s}
+.product-row-meta a.learn:hover{background:var(--accent-bg)}
+.product-row-body p{color:var(--t2);font-size:.92rem;line-height:1.75;margin-bottom:1.25rem}
+.feature-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.feature-list li{font-size:.85rem;color:var(--t2);display:flex;align-items:flex-start;gap:.5rem}
+.feature-list li::before{content:'▸';color:var(--accent);flex-shrink:0;margin-top:.05rem}
+
+.integration-note{background:var(--accent-bg);border:1px solid rgba(249,115,22,.2);border-radius:6px;padding:2.5rem;text-align:center;margin-top:3rem}
+.integration-note h3{font-size:1.25rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.75rem}
+.integration-note p{color:var(--t2);max-width:600px;margin:0 auto 1.5rem;font-size:.92rem}
+
+.btn-primary{background:var(--accent);color:#000;padding:.75rem 1.75rem;border-radius:5px;font-weight:700;font-size:.95rem;transition:background .2s;display:inline-block}
+.btn-primary:hover{background:var(--accent-d)}
+.btn-secondary{border:1px solid var(--border2);color:var(--t1);padding:.75rem 1.75rem;border-radius:5px;font-weight:600;font-size:.95rem;transition:all .2s;display:inline-block}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2rem;margin-top:0}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center}
+.footer-bottom p{font-size:.82rem;color:var(--t3)}
+.footer-bottom .accent{color:var(--accent)}
+
+@media(max-width:768px){
+  .nav-links{display:none}
+  .product-row{grid-template-columns:1fr}
+  .feature-list{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="mi">Mi</span>Choice Technology Systems</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="contactus.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="eyebrow">Products</div>
+  <h1>The Complete K-12 Child Nutrition Suite</h1>
+  <p>Every module is designed to stand alone or operate as part of a fully integrated district-wide system — all built on a single shared data source, all USDA compliant, all built for the realities of school food service.</p>
+</div>
+
+<hr class="divider">
+
+<div class="suite-section">
+
+  <div class="suite-label"><h2>Cafeteria Front Line</h2></div>
+
+  <div class="product-row">
+    <div class="product-row-meta">
+      <div class="badge">eMeal</div>
+      <h3>Touch Screen Point of Sale</h3>
+      <div class="tagline">The serving line, optimized.</div>
+      <a href="pointofsalesystems.html" class="learn">View Details →</a>
+    </div>
+    <div class="product-row-body">
+      <p>eMeal is MiChoice's flagship cafeteria POS — a client/server system that runs on any Windows-based touch screen PC. It handles lunch line throughput, serving line accounting, eligibility status verification, and generates a comprehensive library of child nutrition management reports — all while meeting every applicable government regulation.</p>
+      <ul class="feature-list">
+        <li>Windows touch screen compatible</li>
+        <li>Client/server architecture</li>
+        <li>Real-time eligibility status</li>
+        <li>Comprehensive management reports</li>
+        <li>USDA regulation compliant</li>
+        <li>Integrates with COMS-PRO &amp; FAR-Apps</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="product-row">
+    <div class="product-row-meta">
+      <div class="badge">Biometric ID</div>
+      <h3>Finger Scan Identification</h3>
+      <div class="tagline">Fast. Accurate. Fraud-proof.</div>
+      <a href="biometricfingerscanning.html" class="learn">View Details →</a>
+    </div>
+    <div class="product-row-body">
+      <p>Biometric finger scanning eliminates the need for PIN numbers and ID cards at the serving line. Students are identified in seconds by fingerprint, reducing fraud, speeding throughput, and providing a more dignified experience for free and reduced lunch participants — no one knows who pays what.</p>
+      <ul class="feature-list">
+        <li>Fingerprint identification</li>
+        <li>No PIN or ID card required</li>
+        <li>Reduces serving line fraud</li>
+        <li>Speeds lunch line throughput</li>
+        <li>Discreet for F&amp;R students</li>
+        <li>Integrates with eMeal POS</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="suite-label" style="margin-top:3rem"><h2>Central Office &amp; Administration</h2></div>
+
+  <div class="product-row">
+    <div class="product-row-meta">
+      <div class="badge">COMS-PRO</div>
+      <h3>Central Office Management Software</h3>
+      <div class="tagline">The hub of district nutrition data.</div>
+      <a href="centralmgmtsoftware.html" class="learn">View Details →</a>
+    </div>
+    <div class="product-row-body">
+      <p>COMS-PRO is the data backbone of every MiChoice deployment. It serves the district child nutrition department as a common data source for centralized F&amp;R application processing, district-wide meal accountability, and government reporting. Bi-directional real-time data transfer connects the central office to every cafeteria POS across the district's WAN — automatically.</p>
+      <ul class="feature-list">
+        <li>Real-time bi-directional data transfer</li>
+        <li>District-wide WAN integration</li>
+        <li>Centralized F&amp;R processing</li>
+        <li>Government reporting</li>
+        <li>Meal accountability tracking</li>
+        <li>Connects all MiChoice modules</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="product-row">
+    <div class="product-row-meta">
+      <div class="badge">EZ-Task</div>
+      <h3>Inventory Control Software</h3>
+      <div class="tagline">300+ reports. Zero manual extensions.</div>
+      <a href="inventorysoftware.html" class="learn">View Details →</a>
+    </div>
+    <div class="product-row-body">
+      <p>EZ-Task is the most comprehensive cafeteria inventory tool in K-12 food service. Child nutrition directors can track items, quantities, cost of goods, reorder levels, commodity cross-references, purchasing, and receiving — all with automated reporting that eliminates the hours of manual inventory extension work that used to dominate the end of every period.</p>
+      <ul class="feature-list">
+        <li>300+ standard reports</li>
+        <li>Cost of goods tracking</li>
+        <li>Suggested reorder automation</li>
+        <li>Commodity item cross-references</li>
+        <li>Purchasing &amp; receiving</li>
+        <li>HACCP integration</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="product-row">
+    <div class="product-row-meta">
+      <div class="badge">ETC</div>
+      <h3>Time &amp; Attendance Software</h3>
+      <div class="tagline">Every PC becomes a time clock.</div>
+      <a href="timeandattendancesoftware.html" class="learn">View Details →</a>
+    </div>
+    <div class="product-row-body">
+      <p>ETC transforms any computer — including the cafeteria POS terminal — into a fully functional time clock. Employee time card preparation is automated, gross wages are calculated, and all employee data is maintained in a centralized database. The reporting suite gives directors the real-time workforce data they need to make accurate staffing decisions.</p>
+      <ul class="feature-list">
+        <li>Uses existing POS hardware</li>
+        <li>Automated time card preparation</li>
+        <li>Gross wages calculation</li>
+        <li>Centralized employee database</li>
+        <li>Time clock punch tracking</li>
+        <li>Attendance reporting</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="suite-label" style="margin-top:3rem"><h2>Free &amp; Reduced Eligibility</h2></div>
+
+  <div class="product-row">
+    <div class="product-row-meta">
+      <div class="badge">FAR-Apps</div>
+      <h3>F&amp;R Application Processing</h3>
+      <div class="tagline">Automate eligibility. Maximize funding.</div>
+      <a href="feereducedapplicationssoftware.html" class="learn">View Details →</a>
+    </div>
+    <div class="product-row-body">
+      <p>FAR-Apps automates the entire school lunch program eligibility process — from application intake through status determination and POS update. Eligibility status changes propagate in real time to every cafeteria POS across the district. The result: reduced administrative labor, maximum federal funding capture, and a complete audit trail for compliance reviews.</p>
+      <ul class="feature-list">
+        <li>End-to-end eligibility automation</li>
+        <li>Real-time POS status updates</li>
+        <li>National school lunch compliance</li>
+        <li>Complete audit trail</li>
+        <li>Maximum funding assurance</li>
+        <li>COMS-PRO integrated</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="product-row">
+    <div class="product-row-meta">
+      <div class="badge">Online F&amp;R</div>
+      <h3>Online Application Portal</h3>
+      <div class="tagline">Digital applications. Instant processing.</div>
+      <a href="onlinefreeandreducedapplications.html" class="learn">View Details →</a>
+    </div>
+    <div class="product-row-body">
+      <p>The online F&amp;R application portal allows families to submit eligibility applications digitally — from any device, at any time. Digital submissions flow directly into FAR-Apps for processing, eliminating paper, reducing data entry error, and accelerating the determination timeline. Higher submission rates, lower processing cost, faster funding.</p>
+      <ul class="feature-list">
+        <li>24/7 online submission</li>
+        <li>Any device, any browser</li>
+        <li>Direct FAR-Apps integration</li>
+        <li>Reduces paper and data entry</li>
+        <li>Faster determination timeline</li>
+        <li>Higher family participation rates</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="product-row">
+    <div class="product-row-meta">
+      <div class="badge">F&amp;R Scan</div>
+      <h3>Application Scanning Software</h3>
+      <div class="tagline">Paper in. Digital out.</div>
+      <a href="fandrscanningsoftware.html" class="learn">View Details →</a>
+    </div>
+    <div class="product-row-body">
+      <p>For districts still receiving paper F&amp;R applications, MiChoice's scanning software uses automated OCR to digitize and process paper forms quickly and accurately. Integrated with FAR-Apps, scanned applications move directly into the eligibility workflow — no manual re-keying required.</p>
+      <ul class="feature-list">
+        <li>Automated OCR scanning</li>
+        <li>Paper-to-digital workflow</li>
+        <li>Direct FAR-Apps integration</li>
+        <li>Eliminates manual data entry</li>
+        <li>Batch scanning support</li>
+        <li>Audit-ready records</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="suite-label" style="margin-top:3rem"><h2>Parent &amp; Online Services</h2></div>
+
+  <div class="product-row">
+    <div class="product-row-meta">
+      <div class="badge">mymealmoney.com</div>
+      <h3>Online Patron Meal Payments</h3>
+      <div class="tagline">PCI-certified. Zero manual entry.</div>
+      <a href="onlinemealpayment.html" class="learn">View Details →</a>
+    </div>
+    <div class="product-row-body">
+      <p>Through MiChoice's partnership with RevTrak — the premier K-12 credit and debit card solution provider — parents can visit mymealmoney.com to pay their student's meal account using credit or debit card via the district's personalized secure web store. A simple daily import eliminates all manual data entry. Fund accounting reports make reconciliation effortless.</p>
+      <ul class="feature-list">
+        <li>Credit and debit card payments</li>
+        <li>PCI-certified security</li>
+        <li>District-branded web store</li>
+        <li>Daily automated import</li>
+        <li>Fund accounting reports</li>
+        <li>RevTrak 20+ year partnership</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="product-row">
+    <div class="product-row-meta">
+      <div class="badge">Parent Portal</div>
+      <h3>Online Meal Account Retrieval</h3>
+      <div class="tagline">Balance transparency. Parent confidence.</div>
+      <a href="onlinemealaccountretrieval.html" class="learn">View Details →</a>
+    </div>
+    <div class="product-row-body">
+      <p>Give parents 24/7 visibility into their student's meal account. Current balance, transaction history, and proactive low-balance alerts — all accessible through a secure online portal. Reduces the volume of front-office balance inquiries while improving the family experience.</p>
+      <ul class="feature-list">
+        <li>24/7 online balance access</li>
+        <li>Full transaction history</li>
+        <li>Low-balance email alerts</li>
+        <li>Reduces office inquiries</li>
+        <li>Secure parent authentication</li>
+        <li>Multi-student household support</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="suite-label" style="margin-top:3rem"><h2>Compliance &amp; Safety</h2></div>
+
+  <div class="product-row">
+    <div class="product-row-meta">
+      <div class="badge">Sentry9000</div>
+      <h3>HACCP Automation &amp; Kitchen Management</h3>
+      <div class="tagline">Audit-ready in minutes, not hours.</div>
+      <a href="haccpkitchenmanagement.html" class="learn">View Details →</a>
+    </div>
+    <div class="product-row-body">
+      <p>In partnership with Sentry9000 Inc., MiChoice delivers the most comprehensive automated HACCP documentation system in K-12 food service. IoT sensors and digital manual forms cover the entire food process from receiving through storage, preparation, serving, and cooling/reheating. Incidents are flagged immediately. Compliance audits that used to take hours now take minutes.</p>
+      <ul class="feature-list">
+        <li>IoT sensor integration</li>
+        <li>Full receiving-to-serving chain</li>
+        <li>Real-time incident reporting</li>
+        <li>Corrective action tracking</li>
+        <li>Audit-ready in minutes</li>
+        <li>EZ-Task inventory integration</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="integration-note">
+    <h3>Everything Works Together</h3>
+    <p>MiChoice's suite shares a single data source. Add one module or the entire stack — every piece integrates in real time across your district's network. No manual data transfer. No synchronization delays. One system of record for K-12 child nutrition.</p>
+    <a href="contactus.html" class="btn-primary" style="margin-right:1rem">Schedule a Demo</a>
+    <a href="services.html" class="btn-secondary">Implementation Details</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom">
+      <p>© 2026 <span class="accent">MiChoice Technology Systems, Inc.</span> All rights reserved.</p>
+      <p style="color:var(--t3);font-size:.78rem">Powered by <span class="accent">Carborundum AI</span></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

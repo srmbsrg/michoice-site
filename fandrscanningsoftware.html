@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="F&R Scanning Software — OCR-powered paper free and reduced application scanning for K-12 school districts from MiChoice Technology Systems.">
+<title>F&R Scanning Software | MiChoice Technology Systems</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--bg2:#111111;--bg3:#141414;--border:#1f1f1f;--border2:#2a2a2a;--accent:#f97316;--accent-d:#ea580c;--accent-bg:rgba(249,115,22,.08);--t1:#f5f5f5;--t2:#a3a3a3;--t3:#6b7280;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
+body{font-family:var(--font);background:var(--bg);color:var(--t1);line-height:1.6}a{color:inherit;text-decoration:none}
+nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.2rem;font-weight:700;letter-spacing:-.02em}.logo .mi{color:var(--accent)}
+.nav-links{display:flex;gap:1.75rem;list-style:none}.nav-links a{color:var(--t2);font-size:.88rem;font-weight:500;transition:color .2s}.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:#000 !important;padding:.4rem 1rem;border-radius:4px;font-weight:600 !important}.nav-cta:hover{background:var(--accent-d) !important;color:#000 !important}
+.breadcrumb{max-width:1200px;margin:0 auto;padding:1.5rem 2rem .5rem;font-size:.82rem;color:var(--t3)}.breadcrumb a{color:var(--accent)}.breadcrumb span{margin:0 .5rem}
+.product-hero{max-width:1200px;margin:0 auto;padding:1.5rem 2rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.badge{display:inline-flex;align-items:center;background:var(--accent-bg);border:1px solid rgba(249,115,22,.25);color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border-radius:3px;margin-bottom:1rem}
+.product-hero h1{font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:800;letter-spacing:-.03em;margin-bottom:.75rem}
+.product-hero p{color:var(--t2);font-size:.95rem;line-height:1.8;margin-bottom:1.5rem}
+.product-hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:#000;padding:.7rem 1.5rem;border-radius:5px;font-weight:700;font-size:.9rem;display:inline-block;transition:background .2s}.btn-primary:hover{background:var(--accent-d)}
+.btn-secondary{border:1px solid var(--border2);color:var(--t1);padding:.7rem 1.5rem;border-radius:5px;font-weight:600;font-size:.9rem;display:inline-block;transition:all .2s}.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+.card-visual{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:2rem;text-align:center}.big-icon{font-size:4rem;margin-bottom:1rem}
+.benefit-cards{max-width:1200px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.benefit-card{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:1.5rem}
+.benefit-card .b-num{font-size:2rem;font-weight:800;color:var(--accent);letter-spacing:-.04em;margin-bottom:.5rem}
+.benefit-card h4{font-size:.95rem;font-weight:700;margin-bottom:.4rem}.benefit-card p{font-size:.85rem;color:var(--t2);line-height:1.6}
+.pipeline{max-width:1200px;margin:3rem auto 0;padding:0 2rem}
+.pipeline h2{font-size:1.25rem;font-weight:700;margin-bottom:1.25rem}
+.pipe-steps{display:flex;gap:0;align-items:stretch}
+.pipe-step{flex:1;background:var(--bg3);border:1px solid var(--border);padding:1.1rem;text-align:center}
+.pipe-step:first-child{border-radius:6px 0 0 6px}.pipe-step:last-child{border-radius:0 6px 6px 0}
+.pipe-arrow{display:flex;align-items:center;color:var(--accent);font-size:1.25rem;padding:0 .4rem;flex-shrink:0}
+.pipe-step .p-icon{font-size:1.4rem;margin-bottom:.4rem}
+.pipe-step h4{font-size:.82rem;font-weight:700;margin-bottom:.2rem}.pipe-step p{font-size:.73rem;color:var(--t2);line-height:1.4}
+.features-section{max-width:1200px;margin:0 auto;padding:4rem 2rem}
+.features-section h2{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;margin-bottom:2rem}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.feature-item{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:1.5rem}
+.fi-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;margin-bottom:.75rem}
+.feature-item h4{font-size:.95rem;font-weight:700;margin-bottom:.4rem}.feature-item p{font-size:.85rem;color:var(--t2);line-height:1.6}
+.prose-section{max-width:1200px;margin:0 auto;padding:2rem 2rem 5rem;display:grid;grid-template-columns:2fr 1fr;gap:4rem}
+.prose p{color:var(--t2);font-size:.92rem;line-height:1.8;margin-bottom:1.1rem}.prose h3{font-size:1.1rem;font-weight:700;margin:1.75rem 0 .75rem}.prose h3:first-child{margin-top:0}
+.sidebar-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin-bottom:1.25rem}.sidebar-card h4{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--t3);margin-bottom:.75rem}
+.sidebar-card ul{list-style:none}.sidebar-card li{font-size:.85rem;color:var(--t2);padding:.3rem 0;border-bottom:1px solid var(--border);display:flex;gap:.5rem}.sidebar-card li:last-child{border-bottom:none}.sidebar-card li::before{content:'▸';color:var(--accent);flex-shrink:0}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 2rem}.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.footer-inner p{font-size:.82rem;color:var(--t3)}.accent{color:var(--accent)}
+@media(max-width:768px){.nav-links{display:none}.product-hero{grid-template-columns:1fr}.benefit-cards{grid-template-columns:1fr}.pipe-steps{flex-direction:column}.pipe-arrow{transform:rotate(90deg)}.prose-section{grid-template-columns:1fr}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="index.html" class="logo"><span class="mi">Mi</span>Choice Technology Systems</a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="aboutus.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="services.html">Services</a></li><li><a href="support.html">Support</a></li><li><a href="contactus.html" class="nav-cta">Contact Us</a></li></ul></div></nav>
+<div class="breadcrumb"><a href="index.html">Home</a><span>›</span><a href="products.html">Products</a><span>›</span>F&amp;R Scanning Software</div>
+
+<div class="product-hero">
+  <div>
+    <div class="badge">F&amp;R Scanning</div>
+    <h1>Free &amp; Reduced Application Scanning Software</h1>
+    <p>Paper F&R applications don't have to mean manual data entry. MiChoice's scanning software uses OCR technology to read paper applications, extract data, validate it, and pass it directly to FAR-Apps for processing — no re-keying required. The physical application stays on file as the image. The data is already in the system.</p>
+    <div class="product-hero-actions">
+      <a href="contactus.html" class="btn-primary">Request a Demo</a>
+      <a href="products.html" class="btn-secondary">← All Products</a>
+    </div>
+  </div>
+  <div class="card-visual"><div class="big-icon">🖨️</div><h3>F&amp;R Scanning Software</h3><p>OCR Capture · No Re-Keying · FAR-Apps Ready</p></div>
+</div>
+
+<div class="benefit-cards">
+  <div class="benefit-card"><div class="b-num">Fast</div><h4>Batch Processing</h4><p>Scan an entire batch of paper applications in one pass. OCR extracts the data while staff move on to other work.</p></div>
+  <div class="benefit-card"><div class="b-num">Accurate</div><h4>Validated OCR</h4><p>Data extracted by OCR is validated against NSLP field requirements. Exceptions are flagged for human review — clear cases flow straight through.</p></div>
+  <div class="benefit-card"><div class="b-num">Compliant</div><h4>Image Archive</h4><p>Every scanned application is retained as a digital image — the original paper record preserved and instantly retrievable for audit.</p></div>
+</div>
+
+<div class="pipeline">
+  <h2>The Paper-to-FAR-Apps Pipeline</h2>
+  <div class="pipe-steps">
+    <div class="pipe-step"><div class="p-icon">📋</div><h4>Paper Received</h4><p>Application submitted on paper to district office</p></div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step"><div class="p-icon">🖨️</div><h4>Scanned</h4><p>Batch scan through MiChoice scanning software</p></div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step"><div class="p-icon">🔍</div><h4>OCR Extracts</h4><p>Data fields read and captured automatically</p></div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step"><div class="p-icon">✅</div><h4>Validated</h4><p>Fields checked; exceptions flagged for review</p></div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step"><div class="p-icon">⚡</div><h4>Into FAR-Apps</h4><p>Clean data enters FAR-Apps for determination</p></div>
+  </div>
+</div>
+
+<div class="features-section">
+  <h2>Key Features</h2>
+  <div class="features-grid">
+    <div class="feature-item"><div class="fi-dot"></div><h4>OCR Data Extraction</h4><p>Optical character recognition reads application fields directly from scanned images — eliminating manual data entry for every field on every form.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>Batch Scanning</h4><p>Process multiple paper applications in a single scan session. Suitable for high-volume intake periods at the start of school year.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>Exception Flagging</h4><p>Fields that OCR cannot read with sufficient confidence are flagged for manual review — staff only intervene where genuinely needed, not on every form.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>Digital Image Archive</h4><p>The original scanned image is retained alongside the extracted data — providing a permanent digital copy of the paper application for audit purposes.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>FAR-Apps Integration</h4><p>Extracted data flows directly into FAR-Apps. The scanned application enters the same determination workflow as a digitally submitted application — processed identically.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>No Manual Re-Entry</h4><p>The entire data capture step is automated. Staff no longer keyboard-enter income figures, household sizes, and student information from paper forms.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>Error Reduction</h4><p>OCR-extracted data is validated against field rules automatically. Many data entry errors that occur in manual keying never enter the system at all.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>Seamless with Online Portal</h4><p>Works alongside the Online F&amp;R Application Portal — paper and online intake both feed the same FAR-Apps workflow. Districts don't need separate processes for each channel.</p></div>
+  </div>
+</div>
+
+<div class="prose-section">
+  <div class="prose">
+    <h3>Why Paper Applications Still Matter</h3>
+    <p>Every district wants to maximize online F&R application submissions — and the Online F&R Application Portal makes that possible. But paper applications aren't going away entirely. Households without reliable internet access, families more comfortable with paper, and students who receive forms at school rather than online all contribute to a continuing flow of paper applications in most districts.</p>
+    <p>The F&R Scanning Software ensures that paper applications don't create a two-tier process — one digital and efficient, one manual and labor-intensive. Both channels produce the same result: a clean digital record in FAR-Apps, ready for determination.</p>
+    <h3>How OCR Works in Practice</h3>
+    <p>The MiChoice form is designed for OCR readability — structured fields, clear layout, and formatting that the software is trained to recognize. When a batch of paper applications is scanned, the software reads each field systematically: student names, household income figures, household size, benefit certifications, and all other required NSLP data elements. Fields it reads with high confidence pass directly to FAR-Apps. Fields it cannot read clearly are flagged — presented to a staff member for quick review and correction before the application is submitted to FAR-Apps.</p>
+    <h3>The Audit Archive</h3>
+    <p>Beyond data extraction, the scanning software creates a searchable archive of application images. Every scanned application is stored as a retrievable digital file — linked to the corresponding FAR-Apps record by student and household. When a state or federal audit requires producing the original application, the digital image is found instantly. The physical paper backlog that NSLP compliance once required maintaining can be dramatically reduced.</p>
+  </div>
+  <div>
+    <div class="sidebar-card"><h4>Scanning Capabilities</h4><ul><li>Standard F&R application forms</li><li>Batch scanning support</li><li>OCR field extraction</li><li>Exception review workflow</li><li>Digital image archiving</li><li>Searchable by student/household</li></ul></div>
+    <div class="sidebar-card"><h4>Hardware</h4><ul><li>Standard document scanner</li><li>No proprietary hardware required</li><li>Compatible with most office scanners</li></ul></div>
+    <div class="sidebar-card"><h4>Integrates With</h4><ul><li>FAR-Apps (direct)</li><li>Online F&amp;R Application Portal</li><li>COMS-PRO Central Office</li><li>eMeal POS (via FAR-Apps)</li></ul></div>
+  </div>
+</div>
+
+<footer><div class="footer-inner"><p>© 2026 <span class="accent">MiChoice Technology Systems, Inc.</span> All rights reserved.</p><p style="font-size:.78rem">Powered by <span class="accent">Carborundum AI</span></p></div></footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="eMeal Touch Screen Point of Sale — MiChoice's cafeteria POS for K-12 school food service. Client/server, USDA compliant, comprehensive reporting.">
+<title>eMeal POS | MiChoice Technology Systems</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--bg2:#111111;--bg3:#141414;--bg4:#1a1a1a;--border:#1f1f1f;--border2:#2a2a2a;--accent:#f97316;--accent-d:#ea580c;--accent-bg:rgba(249,115,22,.08);--t1:#f5f5f5;--t2:#a3a3a3;--t3:#6b7280;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
+body{font-family:var(--font);background:var(--bg);color:var(--t1);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.2rem;font-weight:700;letter-spacing:-.02em}.logo .mi{color:var(--accent)}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{color:var(--t2);font-size:.88rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:#000 !important;padding:.4rem 1rem;border-radius:4px;font-weight:600 !important}
+.nav-cta:hover{background:var(--accent-d) !important;color:#000 !important}
+.breadcrumb{max-width:1200px;margin:0 auto;padding:1.5rem 2rem .5rem;font-size:.82rem;color:var(--t3)}
+.breadcrumb a{color:var(--accent);transition:opacity .2s}.breadcrumb a:hover{opacity:.7}
+.breadcrumb span{margin:0 .5rem}
+.product-hero{max-width:1200px;margin:0 auto;padding:1.5rem 2rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.product-hero-text .badge{display:inline-flex;gap:.4rem;align-items:center;background:var(--accent-bg);border:1px solid rgba(249,115,22,.25);color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border-radius:3px;margin-bottom:1rem}
+.product-hero-text h1{font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:800;letter-spacing:-.03em;margin-bottom:.75rem}
+.product-hero-text p{color:var(--t2);font-size:.95rem;line-height:1.8;margin-bottom:1.5rem}
+.product-hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:#000;padding:.7rem 1.5rem;border-radius:5px;font-weight:700;font-size:.9rem;display:inline-block;transition:background .2s}
+.btn-primary:hover{background:var(--accent-d)}
+.btn-secondary{border:1px solid var(--border2);color:var(--t1);padding:.7rem 1.5rem;border-radius:5px;font-weight:600;font-size:.9rem;display:inline-block;transition:all .2s}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+.product-card-visual{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:2rem;text-align:center}
+.product-card-visual .big-icon{font-size:4rem;margin-bottom:1rem}
+.product-card-visual h3{font-size:1rem;font-weight:700;margin-bottom:.25rem}
+.product-card-visual p{font-size:.82rem;color:var(--t2)}
+.features-section{max-width:1200px;margin:0 auto;padding:4rem 2rem}
+.features-section h2{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;margin-bottom:2rem}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.feature-item{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:1.5rem}
+.feature-item h4{font-size:.95rem;font-weight:700;margin-bottom:.4rem;color:var(--t1)}
+.feature-item p{font-size:.85rem;color:var(--t2);line-height:1.6}
+.feature-item .fi-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;margin-bottom:.75rem}
+.prose-section{max-width:1200px;margin:0 auto;padding:2rem 2rem 4rem;display:grid;grid-template-columns:2fr 1fr;gap:4rem}
+.prose p{color:var(--t2);font-size:.92rem;line-height:1.8;margin-bottom:1.1rem}
+.prose h3{font-size:1.1rem;font-weight:700;margin:1.75rem 0 .75rem;letter-spacing:-.01em}
+.prose h3:first-child{margin-top:0}
+.sidebar-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin-bottom:1.25rem}
+.sidebar-card h4{font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--t3);margin-bottom:.75rem}
+.sidebar-card ul{list-style:none}
+.sidebar-card li{font-size:.85rem;color:var(--t2);padding:.3rem 0;border-bottom:1px solid var(--border);display:flex;gap:.5rem;align-items:flex-start}
+.sidebar-card li:last-child{border-bottom:none}
+.sidebar-card li::before{content:'▸';color:var(--accent);flex-shrink:0}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 2rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.footer-inner p{font-size:.82rem;color:var(--t3)}.accent{color:var(--accent)}
+@media(max-width:768px){.nav-links{display:none}.product-hero{grid-template-columns:1fr}.prose-section{grid-template-columns:1fr}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="index.html" class="logo"><span class="mi">Mi</span>Choice Technology Systems</a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="aboutus.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="services.html">Services</a></li><li><a href="support.html">Support</a></li><li><a href="contactus.html" class="nav-cta">Contact Us</a></li></ul></div></nav>
+
+<div class="breadcrumb"><a href="index.html">Home</a><span>›</span><a href="products.html">Products</a><span>›</span>eMeal POS</div>
+
+<div class="product-hero">
+  <div class="product-hero-text">
+    <div class="badge">eMeal</div>
+    <h1>Touch Screen Point of Sale System</h1>
+    <p>The serving line runs on eMeal. MiChoice's flagship cafeteria POS combines speed, accuracy, and full USDA compliance in a client/server system that operates on any Windows-based touch screen PC.</p>
+    <div class="product-hero-actions">
+      <a href="contactus.html" class="btn-primary">Request a Demo</a>
+      <a href="products.html" class="btn-secondary">← All Products</a>
+    </div>
+  </div>
+  <div class="product-card-visual">
+    <div class="big-icon">🖥️</div>
+    <h3>eMeal POS</h3>
+    <p>Client/Server · Windows Touch Screen · USDA Compliant</p>
+  </div>
+</div>
+
+<div class="features-section">
+  <h2>Key Features</h2>
+  <div class="features-grid">
+    <div class="feature-item"><div class="fi-dot"></div><h4>Touch Screen Operation</h4><p>Runs on any Windows-based touch screen PC — no proprietary hardware required. Use existing equipment or new.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>Client/Server Architecture</h4><p>Robust client/server design ensures reliability at every serving station while maintaining centralized data integrity.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>Real-Time Eligibility</h4><p>Live connection to COMS-PRO verifies student eligibility status on every transaction — free, reduced, or full price.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>Biometric Integration</h4><p>Native integration with MiChoice biometric finger scanning for fast, accurate, ID-card-free student identification.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>Comprehensive Reporting</h4><p>A full library of child nutrition management reports — meal counts, revenue, participation rates, and more.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>USDA Compliance</h4><p>Every transaction is recorded to meet applicable government regulations and NSLP reporting requirements.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>Lunch Line Efficiency</h4><p>Designed for throughput. Fast transaction times mean shorter lines and more time for students to eat.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>Serving Line Accounting</h4><p>Complete serving line accountability — every meal transaction is logged, timestamped, and traceable.</p></div>
+    <div class="feature-item"><div class="fi-dot"></div><h4>Multi-School Integration</h4><p>Connects across the district's WAN via COMS-PRO. Central office visibility into every cafeteria in real time.</p></div>
+  </div>
+</div>
+
+<div class="prose-section">
+  <div class="prose">
+    <h3>How eMeal Works</h3>
+    <p>eMeal operates as a client/server Point of Sale program on any brand of Windows-based touch screen PC. The touch interface is designed for the realities of a cafeteria environment — gloved hands, fast transactions, minimal training required for serving line staff.</p>
+    <p>At the serving line, the system identifies the student (via biometric scan, PIN, or ID card), retrieves their eligibility status in real time from COMS-PRO, records the transaction, and updates account balances instantly. The entire process takes seconds per student.</p>
+    <h3>Integration with the MiChoice Suite</h3>
+    <p>eMeal is the front end of the MiChoice ecosystem. It connects in real time to COMS-PRO (Central Office Management) for eligibility status and district reporting, to FAR-Apps for free and reduced status updates, and to mymealmoney.com for balance pre-payments made by parents online.</p>
+    <p>When a parent pays online at 7pm, the balance is available at the serving line the next morning. When an eligibility determination changes, the new status is live at the POS within minutes — not days.</p>
+    <h3>Reporting Capabilities</h3>
+    <p>eMeal generates a comprehensive library of child nutrition management reports — daily meal counts by category, revenue reconciliation, participation rates by school or district, reimbursable meal tracking, and more. Everything your child nutrition director needs for USDA reporting and operational decision-making.</p>
+  </div>
+  <div>
+    <div class="sidebar-card">
+      <h4>System Requirements</h4>
+      <ul>
+        <li>Any Windows-based PC</li>
+        <li>Touch screen display</li>
+        <li>Network connectivity (LAN/WAN)</li>
+        <li>Connection to COMS-PRO server</li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <h4>Integrates With</h4>
+      <ul>
+        <li>COMS-PRO Central Office</li>
+        <li>FAR-Apps F&amp;R Processing</li>
+        <li>Biometric Finger Scanning</li>
+        <li>mymealmoney.com Payments</li>
+        <li>EZ-Task Inventory</li>
+        <li>ETC Time &amp; Attendance</li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <h4>Compliance</h4>
+      <ul>
+        <li>USDA NSLP requirements</li>
+        <li>Free &amp; Reduced eligibility</li>
+        <li>Government meal reporting</li>
+        <li>Reimbursable meal tracking</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer><div class="footer-inner"><p>© 2026 <span class="accent">MiChoice Technology Systems, Inc.</span> All rights reserved.</p><p style="font-size:.78rem">Powered by <span class="accent">Carborundum AI</span></p></div></footer>
+</body>
+</html>
