@@ -6,7 +6,7 @@
 <title>Online Meal Payments | MiChoice Technology Systems</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0a;--bg2:#111111;--bg3:#141414;--border:#1f1f1f;--border2:#2a2a2a;--accent:#f97316;--accent-d:#ea580c;--accent-bg:rgba(249,115,22,.08);--t1:#f5f5f5;--t2:#a3a3a3;--t3:#6b7280;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
+:root{--bg:#0a0a0a;--bg2:#111111;--bg3:#141414;--border:#1f1f1f;--border2:#2a2a2a;--accent:#3b82f6;--accent-d:#2563eb;--accent-bg:rgba(59,130,246,.08);--t1:#f5f5f5;--t2:#a3a3a3;--t3:#6b7280;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
 body{font-family:var(--font);background:var(--bg);color:var(--t1);line-height:1.6}a{color:inherit;text-decoration:none}
 nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;z-index:100}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
@@ -15,7 +15,7 @@ nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 2rem;p
 .nav-cta{background:var(--accent);color:#000 !important;padding:.4rem 1rem;border-radius:4px;font-weight:600 !important}.nav-cta:hover{background:var(--accent-d) !important;color:#000 !important}
 .breadcrumb{max-width:1200px;margin:0 auto;padding:1.5rem 2rem .5rem;font-size:.82rem;color:var(--t3)}.breadcrumb a{color:var(--accent)}.breadcrumb span{margin:0 .5rem}
 .product-hero{max-width:1200px;margin:0 auto;padding:1.5rem 2rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.badge{display:inline-flex;align-items:center;background:var(--accent-bg);border:1px solid rgba(249,115,22,.25);color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border-radius:3px;margin-bottom:1rem}
+.badge{display:inline-flex;align-items:center;background:var(--accent-bg);border:1px solid rgba(59,130,246,.25);color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border-radius:3px;margin-bottom:1rem}
 .product-hero h1{font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:800;letter-spacing:-.03em;margin-bottom:.75rem}
 .product-hero p{color:var(--t2);font-size:.95rem;line-height:1.8;margin-bottom:1.5rem}
 .product-hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
@@ -58,7 +58,48 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 2
       <a href="products.html" class="btn-secondary">← All Products</a>
     </div>
   </div>
-  <div class="card-visual"><div class="big-icon">💳</div><h3>Online Meal Payments</h3><p>PCI-Certified · Automatic Import · Zero Manual Entry</p></div>
+  <div class="card-visual" style="padding:0;overflow:hidden;background:#0d0f14">
+<svg viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+  <rect width="380" height="260" fill="#0d0f14"/>
+  <!-- Credit card graphic -->
+  <rect x="50" y="40" width="220" height="135" rx="10" fill="#1e3a5c" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- Card gradient stripe top -->
+  <rect x="50" y="40" width="220" height="48" rx="10" fill="#2563eb" opacity="0.5"/>
+  <rect x="50" y="70" width="220" height="18" fill="#2563eb" opacity="0.3"/>
+  <!-- Chip -->
+  <rect x="70" y="82" width="32" height="24" rx="3" fill="#f59e0b" opacity="0.85"/>
+  <line x1="70" y1="94" x2="102" y2="94" stroke="#b45309" stroke-width="0.8"/>
+  <line x1="86" y1="82" x2="86" y2="106" stroke="#b45309" stroke-width="0.8"/>
+  <!-- Contactless symbol -->
+  <g fill="none" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" opacity="0.7" transform="translate(116,86)">
+    <path d="M 0 6 A 6 6 0 0 1 0 -6"/>
+    <path d="M 6 10 A 12 12 0 0 1 6 -10"/>
+    <path d="M 12 14 A 18 18 0 0 1 12 -14"/>
+  </g>
+  <!-- Card number -->
+  <text x="70" y="140" fill="#93c5fd" font-size="11" font-family="monospace" letter-spacing="3">•••• •••• •••• 4821</text>
+  <!-- Cardholder & expiry -->
+  <text x="70" y="158" fill="#64748b" font-size="7" font-family="Arial">CARDHOLDER</text>
+  <text x="190" y="158" fill="#64748b" font-size="7" font-family="Arial">EXPIRES</text>
+  <text x="70" y="168" fill="#93c5fd" font-size="8" font-family="Arial" font-weight="bold">Johnson Family</text>
+  <text x="190" y="168" fill="#93c5fd" font-size="8" font-family="Arial" font-weight="bold">09/27</text>
+  <!-- Security lock badge -->
+  <g transform="translate(300,80)">
+    <circle cx="0" cy="0" r="38" fill="#0f1d30" stroke="#1e3a5c" stroke-width="1"/>
+    <rect x="-15" y="-5" width="30" height="22" rx="4" fill="#1e3a5c" stroke="#3b82f6" stroke-width="1"/>
+    <path d="M -9 -5 L -9 -14 A 9 9 0 0 1 9 -14 L 9 -5" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="0" cy="8" r="4" fill="#3b82f6"/>
+    <text x="0" y="45" fill="#93c5fd" font-size="7" font-family="Arial" text-anchor="middle" font-weight="bold">PCI</text>
+    <text x="0" y="55" fill="#64748b" font-size="6.5" font-family="Arial" text-anchor="middle">Certified</text>
+  </g>
+  <!-- Confirmation bar -->
+  <rect x="50" y="190" width="220" height="28" rx="4" fill="#14532d" stroke="#22c55e" stroke-width="0.5"/>
+  <path d="M 65 204 L 72 211 L 85 197" stroke="#22c55e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <text x="180" y="201" fill="#86efac" font-size="8" font-family="Arial" text-anchor="middle" font-weight="bold">Payment Confirmed</text>
+  <text x="180" y="212" fill="#4b9a6a" font-size="7" font-family="Arial" text-anchor="middle">Imported to MiChoice · No Manual Entry</text>
+  <text x="190" y="245" fill="#4b6d90" font-size="8" font-family="Arial" text-anchor="middle">mymealmoney.com · Powered by RevTrak · 20+ Years</text>
+</svg>
+</div><h3>Online Meal Payments</h3><p>PCI-Certified · Automatic Import · Zero Manual Entry</p></div>
 </div>
 
 <div class="flow">
