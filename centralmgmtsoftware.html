@@ -7,7 +7,7 @@
 <title>COMS-PRO Central Office Management | MiChoice Technology Systems</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0a;--bg2:#111111;--bg3:#141414;--bg4:#1a1a1a;--border:#1f1f1f;--border2:#2a2a2a;--accent:#f97316;--accent-d:#ea580c;--accent-bg:rgba(249,115,22,.08);--t1:#f5f5f5;--t2:#a3a3a3;--t3:#6b7280;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
+:root{--bg:#0a0a0a;--bg2:#111111;--bg3:#141414;--bg4:#1a1a1a;--border:#1f1f1f;--border2:#2a2a2a;--accent:#3b82f6;--accent-d:#2563eb;--accent-bg:rgba(59,130,246,.08);--t1:#f5f5f5;--t2:#a3a3a3;--t3:#6b7280;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
 body{font-family:var(--font);background:var(--bg);color:var(--t1);line-height:1.6}
 a{color:inherit;text-decoration:none}
 nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;z-index:100}
@@ -19,7 +19,7 @@ nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 2rem;p
 .breadcrumb{max-width:1200px;margin:0 auto;padding:1.5rem 2rem .5rem;font-size:.82rem;color:var(--t3)}
 .breadcrumb a{color:var(--accent)}.breadcrumb span{margin:0 .5rem}
 .product-hero{max-width:1200px;margin:0 auto;padding:1.5rem 2rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.badge{display:inline-flex;gap:.4rem;align-items:center;background:var(--accent-bg);border:1px solid rgba(249,115,22,.25);color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border-radius:3px;margin-bottom:1rem}
+.badge{display:inline-flex;gap:.4rem;align-items:center;background:var(--accent-bg);border:1px solid rgba(59,130,246,.25);color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border-radius:3px;margin-bottom:1rem}
 .product-hero h1{font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:800;letter-spacing:-.03em;margin-bottom:.75rem}
 .product-hero p{color:var(--t2);font-size:.95rem;line-height:1.8;margin-bottom:1.5rem}
 .product-hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
@@ -62,8 +62,67 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 2
       <a href="products.html" class="btn-secondary">← All Products</a>
     </div>
   </div>
-  <div class="card-visual">
-    <div class="big-icon">🏢</div>
+  <div class="card-visual" style="padding:0;overflow:hidden;background:#0d0f14">
+<svg viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+  <rect width="380" height="260" fill="#0d0f14"/>
+  <!-- Hub lines radiating out -->
+  <line x1="190" y1="130" x2="65" y2="65"  stroke="#2563eb" stroke-width="1.2" opacity="0.5" stroke-dasharray="4 3"/>
+  <line x1="190" y1="130" x2="315" y2="65"  stroke="#2563eb" stroke-width="1.2" opacity="0.5" stroke-dasharray="4 3"/>
+  <line x1="190" y1="130" x2="50"  y2="175" stroke="#2563eb" stroke-width="1.2" opacity="0.5" stroke-dasharray="4 3"/>
+  <line x1="190" y1="130" x2="330" y2="175" stroke="#2563eb" stroke-width="1.2" opacity="0.5" stroke-dasharray="4 3"/>
+  <line x1="190" y1="130" x2="190" y2="40"  stroke="#2563eb" stroke-width="1.5" opacity="0.6" stroke-dasharray="4 3"/>
+  <!-- Animated data dots on lines -->
+  <circle r="3" fill="#3b82f6" opacity="0.9">
+    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 190 130 L 65 65"/>
+    <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="3" fill="#3b82f6" opacity="0.9">
+    <animateMotion dur="2.1s" repeatCount="indefinite" path="M 190 130 L 315 65"/>
+    <animate attributeName="opacity" values="0;1;0" dur="2.1s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="3" fill="#3b82f6" opacity="0.9">
+    <animateMotion dur="2.8s" repeatCount="indefinite" path="M 65 65 L 190 130"/>
+    <animate attributeName="opacity" values="0;1;0" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="3" fill="#93c5fd" opacity="0.9">
+    <animateMotion dur="1.9s" repeatCount="indefinite" path="M 330 175 L 190 130"/>
+    <animate attributeName="opacity" values="0;1;0" dur="1.9s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Central server node -->
+  <rect x="158" y="100" width="64" height="60" rx="6" fill="#1e3a5c" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="163" y="106" width="54" height="8" rx="2" fill="#0d2a4a"/>
+  <rect x="163" y="116" width="54" height="8" rx="2" fill="#0d2a4a"/>
+  <rect x="163" y="126" width="54" height="8" rx="2" fill="#0d2a4a"/>
+  <circle cx="175" cy="110" r="2" fill="#22c55e"/>
+  <circle cx="175" cy="120" r="2" fill="#22c55e"/>
+  <circle cx="175" cy="130" r="2" fill="#f59e0b"/>
+  <text x="190" y="150" fill="#93c5fd" font-size="7" font-family="Arial" text-anchor="middle" font-weight="bold">COMS-PRO</text>
+  <!-- School nodes -->
+  <g fill="#132033" stroke="#2563eb" stroke-width="1">
+    <!-- Top -->
+    <rect x="162" y="20" width="56" height="36" rx="4"/>
+    <text x="190" y="35" fill="#93c5fd" font-size="6.5" font-family="Arial" text-anchor="middle" font-weight="bold">District</text>
+    <text x="190" y="46" fill="#64748b" font-size="6" font-family="Arial" text-anchor="middle">Office</text>
+    <!-- Top-left -->
+    <rect x="35" y="45" width="60" height="36" rx="4"/>
+    <text x="65" y="60" fill="#93c5fd" font-size="6.5" font-family="Arial" text-anchor="middle" font-weight="bold">Lincoln</text>
+    <text x="65" y="71" fill="#64748b" font-size="6" font-family="Arial" text-anchor="middle">Elementary</text>
+    <!-- Top-right -->
+    <rect x="285" y="45" width="60" height="36" rx="4"/>
+    <text x="315" y="60" fill="#93c5fd" font-size="6.5" font-family="Arial" text-anchor="middle" font-weight="bold">Jefferson</text>
+    <text x="315" y="71" fill="#64748b" font-size="6" font-family="Arial" text-anchor="middle">Middle</text>
+    <!-- Bottom-left -->
+    <rect x="20" y="157" width="60" height="36" rx="4"/>
+    <text x="50" y="172" fill="#93c5fd" font-size="6.5" font-family="Arial" text-anchor="middle" font-weight="bold">Washington</text>
+    <text x="50" y="183" fill="#64748b" font-size="6" font-family="Arial" text-anchor="middle">High School</text>
+    <!-- Bottom-right -->
+    <rect x="300" y="157" width="60" height="36" rx="4"/>
+    <text x="330" y="172" fill="#93c5fd" font-size="6.5" font-family="Arial" text-anchor="middle" font-weight="bold">Roosevelt</text>
+    <text x="330" y="183" fill="#64748b" font-size="6" font-family="Arial" text-anchor="middle">Elementary</text>
+  </g>
+  <text x="190" y="240" fill="#4b6d90" font-size="8" font-family="Arial" text-anchor="middle">Real-Time · Bi-Directional · District-Wide</text>
+</svg>
+</div>
     <h3>COMS-PRO</h3>
     <p>Central Office · Real-Time · District-Wide</p>
   </div>
