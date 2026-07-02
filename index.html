@@ -101,12 +101,24 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
 .footer-bottom p{font-size:.82rem;color:var(--t3)}
 .footer-bottom .accent{color:var(--accent)}
 
+/* SCREENSHOTS */
+.screenshots-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.screenshots-inner{max-width:1200px;margin:0 auto;padding:5rem 2rem}
+.screenshots-inner .section-header{margin-bottom:2.5rem}
+.screenshot-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.screenshot-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color .2s,transform .2s}
+.screenshot-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.screenshot-card img{width:100%;display:block;border-bottom:1px solid var(--border)}
+.screenshot-caption{padding:.85rem 1rem;font-size:.82rem;color:var(--t2);line-height:1.5}
+.screenshot-caption strong{color:var(--t1);display:block;margin-bottom:.2rem;font-size:.85rem}
+
 /* RESPONSIVE */
 @media(max-width:768px){
   .nav-links{display:none}
   .about-inner{grid-template-columns:1fr}
   .footer-top{grid-template-columns:1fr 1fr}
   .about-pillars{grid-template-columns:1fr}
+  .screenshot-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -180,7 +192,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
       <div class="product-icon">
         <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
       </div>
-      <div class="product-name-sub">eMeal</div>
+      <div class="product-name-sub">miMeal <span style="font-weight:400;font-size:.68em;opacity:.55">(eMeal)</span></div>
       <h3>Touch Screen Point of Sale</h3>
       <p>Client/server POS on any Windows touch screen PC. Lunch line efficiency, serving line accounting, comprehensive management reports — all USDA compliant.</p>
       <span class="learn-more">Learn more →</span>
@@ -191,7 +203,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
       <div class="product-icon">
         <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
       </div>
-      <div class="product-name-sub">COMS-PRO</div>
+      <div class="product-name-sub">miComs <span style="font-weight:400;font-size:.68em;opacity:.55">(COMS-PRO)</span></div>
       <h3>Central Office Management</h3>
       <p>The hub of your district's nutrition data. Real-time bi-directional data transfer, centralized F&amp;R processing, and district-wide meal accountability reporting.</p>
       <span class="learn-more">Learn more →</span>
@@ -202,7 +214,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
       <div class="product-icon">
         <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
       </div>
-      <div class="product-name-sub">FAR-Apps</div>
+      <div class="product-name-sub">miFAR <span style="font-weight:400;font-size:.68em;opacity:.55">(FAR-Apps)</span></div>
       <h3>Free &amp; Reduced Application Processing</h3>
       <p>Automates eligibility processing end-to-end. Real-time status updates at the POS, maximum school lunch funding, full compliance audit trail.</p>
       <span class="learn-more">Learn more →</span>
@@ -224,7 +236,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
       <div class="product-icon">
         <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
       </div>
-      <div class="product-name-sub">mymealmoney.com</div>
+      <div class="product-name-sub">miMealMoney <span style="font-weight:400;font-size:.68em;opacity:.55">(mymealmoney.com)</span></div>
       <h3>Online Patron Meal Payments</h3>
       <p>PCI-certified credit and debit card payments via RevTrak. Parents pay online, balances import automatically — zero manual data entry for district staff.</p>
       <span class="learn-more">Learn more →</span>
@@ -246,7 +258,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
       <div class="product-icon">
         <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       </div>
-      <div class="product-name-sub">EZ-Task</div>
+      <div class="product-name-sub">miInventory <span style="font-weight:400;font-size:.68em;opacity:.55">(EZ-Task)</span></div>
       <h3>Inventory Control Software</h3>
       <p>300+ reports. Track items, quantities, cost of goods, reorder levels, commodity cross-references. Dramatically cuts inventory time and eliminates manual extensions.</p>
       <span class="learn-more">Learn more →</span>
@@ -257,9 +269,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
       <div class="product-icon">
         <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       </div>
-      <div class="product-name-sub">Sentry9000</div>
-      <h3>HACCP Automation &amp; Kitchen Management</h3>
-      <p>Automated HACCP documentation from receiving through serving. IoT sensor data, corrective action tracking, audit-ready in minutes. Seamlessly integrated with EZ-Task.</p>
+      <div class="product-name-sub">MiChoice Kitchen</div>
+      <h3>Kitchen Management &amp; Temperature Monitoring</h3>
+      <p>IoT-connected temperature monitoring and digital kitchen documentation from receiving through serving. Corrective action tracking, audit-ready in minutes. Seamlessly integrated with EZ-Task.</p>
       <span class="learn-more">Learn more →</span>
     </div>
 
@@ -268,7 +280,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
       <div class="product-icon">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
       </div>
-      <div class="product-name-sub">ETC</div>
+      <div class="product-name-sub">miTimes <span style="font-weight:400;font-size:.68em;opacity:.55">(ETC)</span></div>
       <h3>Time &amp; Attendance Software</h3>
       <p>Turn any PC — including your POS terminal — into a time clock. Automated time cards, gross wages calculation, centralized employee database.</p>
       <span class="learn-more">Learn more →</span>
@@ -343,6 +355,83 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
   </div>
 </div>
 
+<div class="screenshots-section">
+  <div class="screenshots-inner">
+    <div class="section-header">
+      <div class="eyebrow">Platform Screenshots</div>
+      <h2>eMeal in Action</h2>
+      <p>eMeal is built for the pace of real school cafeteria operations. Every screen is designed for speed, compliance, and clarity.</p>
+    </div>
+    <div class="screenshot-grid">
+
+      <div class="screenshot-card">
+        <img src="screenshots/ss_pos_terminal.png" alt="MiMeals POS Terminal — 3-panel serving interface" loading="lazy">
+        <div class="screenshot-caption">
+          <strong>MiMeals POS Terminal</strong>
+          3-panel serving interface at 1,000+ students/hour
+        </div>
+      </div>
+
+      <div class="screenshot-card">
+        <img src="screenshots/ss_dashboard.png" alt="Manager Dashboard with miAgentic Production Advisor" loading="lazy">
+        <div class="screenshot-caption">
+          <strong>Manager Dashboard</strong>
+          miAgentic Production Advisor surfaces insights each morning
+        </div>
+      </div>
+
+      <div class="screenshot-card">
+        <img src="screenshots/ss_reports.png" alt="miReports — District analytics with eligibility visualization" loading="lazy">
+        <div class="screenshot-caption">
+          <strong>miReports</strong>
+          District analytics with 7 CFR 245 compliant eligibility visualization
+        </div>
+      </div>
+
+      <div class="screenshot-card">
+        <img src="screenshots/ss_inventory.png" alt="miInventory — AI reorder predictions" loading="lazy">
+        <div class="screenshot-caption">
+          <strong>miInventory</strong>
+          AI predicts reorder needs before tomorrow's service
+        </div>
+      </div>
+
+      <div class="screenshot-card">
+        <img src="screenshots/ss_bom.png" alt="Recipe/BOM Editor split panel" loading="lazy">
+        <div class="screenshot-caption">
+          <strong>Recipe/BOM Editor</strong>
+          Map menu items to ingredients once; auto-deduct runs daily
+        </div>
+      </div>
+
+      <div class="screenshot-card">
+        <img src="screenshots/ss_timeatt.png" alt="miTimes — Live roster with staff cards" loading="lazy">
+        <div class="screenshot-caption">
+          <strong>miTimes</strong>
+          Live roster with position-coded staff cards, 60-second refresh
+        </div>
+      </div>
+
+      <div class="screenshot-card">
+        <img src="screenshots/ss_training.png" alt="miTraining — Voice-guided cashier onboarding" loading="lazy">
+        <div class="screenshot-caption">
+          <strong>miTraining</strong>
+          Voice-guided cashier onboarding with real district menu data
+        </div>
+      </div>
+
+      <div class="screenshot-card">
+        <img src="screenshots/ss_clockin.png" alt="POS Clock-In Kiosk PIN entry" loading="lazy">
+        <div class="screenshot-caption">
+          <strong>POS Clock-In</strong>
+          Staff clock in at the register before serving begins
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <div class="cta-section">
   <h2>Ready to Transform Your Food Service Program?</h2>
   <p>Talk to our team about the right suite of tools for your district — from a single module to the complete integrated system.</p>
@@ -362,11 +451,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
       <div class="footer-col">
         <h4>Products</h4>
         <ul>
-          <li><a href="pointofsalesystems.html">eMeal POS</a></li>
-          <li><a href="centralmgmtsoftware.html">COMS-PRO</a></li>
-          <li><a href="feereducedapplicationssoftware.html">FAR-Apps</a></li>
-          <li><a href="inventorysoftware.html">EZ-Task Inventory</a></li>
-          <li><a href="haccpkitchenmanagement.html">HACCP Automation</a></li>
+          <li><a href="pointofsalesystems.html">miMeal <span style="font-weight:400;font-size:.68em;opacity:.55">(eMeal)</span> POS</a></li>
+          <li><a href="centralmgmtsoftware.html">miComs <span style="font-weight:400;font-size:.68em;opacity:.55">(COMS-PRO)</span></a></li>
+          <li><a href="feereducedapplicationssoftware.html">miFAR <span style="font-weight:400;font-size:.68em;opacity:.55">(FAR-Apps)</span></a></li>
+          <li><a href="inventorysoftware.html">miInventory <span style="font-weight:400;font-size:.68em;opacity:.55">(EZ-Task)</span> Inventory</a></li>
+          <li><a href="haccpkitchenmanagement.html">Kitchen Management</a></li>
           <li><a href="timeandattendancesoftware.html">Time &amp; Attendance</a></li>
         </ul>
       </div>

@@ -96,7 +96,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 2
 <div class="contact-layout">
 
   <div>
-    <form class="contact-form" onsubmit="return false;">
+    <form class="contact-form" id="contactForm" onsubmit="return submitContact(event);">
       <div class="form-row">
         <div>
           <label for="fname">First Name</label>
@@ -141,7 +141,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 2
       </div>
       <div>
         <h4>Sales &amp; Demos</h4>
-        <p>Call or fill out the form — we'll schedule a demonstration tailored to your district's configuration.</p>
+        <p>Call <a href="tel:+18663348257">1.866.334.8257</a> or fill out the form — we'll schedule a demonstration tailored to your district's configuration.</p>
       </div>
     </div>
 
@@ -151,7 +151,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 2
       </div>
       <div>
         <h4>Help Desk Support</h4>
-        <p>Current customers: contact our telephone help desk directly for system support. <a href="support.html">Support details →</a></p>
+        <p>Current customers: call our help desk at <a href="tel:+12815170400">1.281.517.0400</a> or email <a href="mailto:support@michoicetechnology.com">support@michoicetechnology.com</a>. <a href="support.html">Support details →</a></p>
       </div>
     </div>
 
@@ -169,11 +169,36 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 2
 
     <div class="contact-info-item">
       <div class="ci-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.75A16 16 0 0 0 16 16.75l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      <div>
+        <h4>Phone</h4>
+        <p><a href="tel:+18663348257">1.866.334.8257</a> Toll Free<br>
+        <a href="tel:+12815170400">1.281.517.0400</a> Local<br>
+        <span style="color:var(--t3)">1.866.334.1535 Fax</span></p>
+        <p style="margin-top:.4rem;font-size:.8rem;color:var(--t3)">Office hours: 8:00 a.m.–5:00 p.m. CT, Mon–Fri</p>
+      </div>
+    </div>
+
+    <div class="contact-info-item">
+      <div class="ci-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div>
+        <h4>Corporate Office</h4>
+        <p>11210 Steeplecrest Drive, Ste 270<br>Houston, Texas 77065</p>
+      </div>
+    </div>
+
+    <div class="contact-info-item">
+      <div class="ci-icon">
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       </div>
       <div>
         <h4>Email</h4>
-        <a href="mailto:info@michoicetechnology.com">info@michoicetechnology.com</a>
+        <p><a href="mailto:info@michoicetechnology.com">info@michoicetechnology.com</a> — General<br>
+        <a href="mailto:sales@michoicetechnology.com">sales@michoicetechnology.com</a> — Sales<br>
+        <a href="mailto:support@michoicetechnology.com">support@michoicetechnology.com</a> — Support</p>
       </div>
     </div>
 
@@ -190,6 +215,30 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 2
     <p style="font-size:.78rem">Powered by <span class="accent">Carborundum AI</span></p>
   </div>
 </footer>
+
+<script>
+function submitContact(e){
+  e.preventDefault();
+  var g=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
+  var fname=g('fname'),lname=g('lname'),email=g('email'),phone=g('phone'),
+      district=g('district'),state=g('state'),inquiry=g('inquiry'),message=g('message');
+  var subject='Website inquiry'+(inquiry?' — '+inquiry:'')+(district?' ('+district+')':'');
+  var body=
+    'Name: '+(fname+' '+lname).trim()+'\n'+
+    'Email: '+email+'\n'+
+    'Phone: '+phone+'\n'+
+    'District / Organization: '+district+'\n'+
+    'State: '+state+'\n'+
+    'Inquiry type: '+inquiry+'\n\n'+
+    'Message:\n'+message+'\n';
+  window.location.href='mailto:info@michoicetechnology.com'+
+    '?subject='+encodeURIComponent(subject)+
+    '&body='+encodeURIComponent(body);
+  var btn=document.querySelector('#contactForm .btn-submit');
+  if(btn){btn.textContent='Opening your email app…';}
+  return false;
+}
+</script>
 
 </body>
 </html>
