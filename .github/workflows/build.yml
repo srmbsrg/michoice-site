@@ -1,0 +1,54 @@
+name: build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+# Static HTML site (no bundler). A "compile" step would be theatre, so CI verifies
+# the things that can actually break this site: malformed HTML and dead local links.
+jobs:
+  build:
+    name: html validate / dead-link check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install tidy
+        run: sudo apt-get update -qq && sudo apt-get install -y tidy
+
+      - name: HTML syntax check (errors only, warnings tolerated)
+        run: |
+          fail=0
+          for f in $(git ls-files '*.html'); do
+            if ! tidy -q -e "$f" 2>&1 | grep -q "Error:"; then :; else
+              echo "::error file=$f::HTML syntax error"
+              tidy -q -e "$f" 2>&1 | grep "Error:" | head -5
+              fail=1
+            fi
+          done
+          exit $fail
+
+      - name: Dead local link / asset check
+        run: |
+          fail=0
+          for f in $(git ls-files '*.html'); do
+            dir=$(dirname "$f")
+            # pull local href/src targets, ignore external, anchors, mailto/tel/js
+            for link in $(grep -oiE '(href|src)="[^"#?:]+"' "$f" | sed -E 's/.*="([^"]+)".*/\1/' | sort -u); do
+              case "$link" in
+                http*|//*|mailto:*|tel:*|javascript:*|"#"*) continue ;;
+              esac
+              target="$dir/$link"
+              [ "${link#/}" != "$link" ] && target=".${link}"
+              if [ ! -e "$target" ]; then
+                echo "::error file=$f::dead local link -> $link"
+                fail=1
+              fi
+            done
+          done
+          if [ $fail -eq 0 ]; then echo "All local links resolve."; fi
+          exit $fail
